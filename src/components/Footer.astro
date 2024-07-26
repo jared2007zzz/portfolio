@@ -1,5 +1,10 @@
 ---
 const currentYear = new Date().getFullYear()
+import SocialPill from "@/components/SocialPill.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import FacebookIcon from "@/components/icons/Facebook.astro"
+import InstagramIcon from "@/components/icons/Instagram.astro"
+import WasaIcon from "@/components/icons/Wasa.astro"
 ---
 
 <footer
@@ -10,8 +15,8 @@ const currentYear = new Date().getFullYear()
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://midu.dev/" class="hover:underline">midudev</a>. Casi
-      todos los derechos reservados
+      <a class="hover:underline">Jared</a>.
+      Todos los derechos reservados
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
@@ -19,11 +24,19 @@ const currentYear = new Date().getFullYear()
       <li>
         <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
       </li>
-      <li>
-        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline"
-          >Contacto</a
-        >
-      </li>
+      <nav class="flex flex-wrap gap-3">
+      <SocialPill href="https://mail.google.com/mail/u/0/#inbox">
+        <WasaIcon class="size"/>
+      </SocialPill>
+    
+      <SocialPill href="https://www.instagram.com/_jared_zzz/">
+        <InstagramIcon class="size-4" />
+      </SocialPill>
+
+      <SocialPill href="https://www.facebook.com/profile.php?id=100083751398538">
+        <FacebookIcon class="size-4" />
+      </SocialPill>
+      </nav>
     </ul>
   </div>
 </footer>
